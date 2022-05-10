@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'hseeberger/scala-sbt:8u322_1.6.2_2.13.8'
+        }
+    }
 
     environment {
         SNYK_TOKEN = credentials('SNYK_TOKEN')
