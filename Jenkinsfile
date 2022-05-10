@@ -1,7 +1,6 @@
 pipeline {
     agent {
-        docker {
-            image 'ubuntu'
+        any {
             args '-u root:sudo -v $HOME/workspace/scala3-example-project:/scala3-example-project'
         }
     }
