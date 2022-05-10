@@ -39,7 +39,7 @@ pipeline {
             }
         }
 
-        stage('Snyk Code Test using Snyk CLI') {
+        stage('Snyk Test using Snyk CLI') {
             steps {
                 sh './snyk test --json | ./snyk-to-html -o results.html'
             }
