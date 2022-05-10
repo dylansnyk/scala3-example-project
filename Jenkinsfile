@@ -9,8 +9,7 @@ pipeline {
 
         stage('Compile SBT Application') {
             steps {
-                // assumes you have the sbt plugin installed and created an sbt installation named 'sbt-1.5'
-                sh '${tool name: 'sbt-1.5', type: 'org.jvnet.hudson.plugins.SbtPluginBuilder$SbtInstallation'}/bin/sbt compile'
+                sh 'sbt compile'
             }
         }
 
